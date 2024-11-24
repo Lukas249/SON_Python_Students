@@ -1,4 +1,4 @@
-from GitProject.attendance.parse_attendance import ParseAttendance
+from attendance.parse_attendance import ParseAttendance
 
 class TestParseAttendance:
     def test_parse_to_attendance_csv_multiple_students(self):

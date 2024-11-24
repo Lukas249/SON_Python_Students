@@ -1,8 +1,8 @@
 import datetime
 
-from GitProject.attendance.attendance import Attendance
-from GitProject.attendance.format_attendance import FormatAttendance
-from GitProject.students.student import Student
+from attendance.attendance import Attendance
+from attendance.format_attendance import FormatAttendance
+from students.student import Student
 
 class TestFormatAttendance:
     def test_format_to_csv_multiple_students(self):

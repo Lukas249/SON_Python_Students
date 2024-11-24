@@ -1,5 +1,5 @@
-from GitProject.students.format_students import FormatStudents
-from GitProject.students.student import Student
+from students.format_students import FormatStudents
+from students.student import Student
 
 
 class TestFormatStudents:

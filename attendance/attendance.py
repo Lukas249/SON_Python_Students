@@ -1,7 +1,6 @@
 ﻿from datetime import datetime
 
-from GitProject.students.student import Student
-
+from students.student import Student
 
 class Attendance:
     def __init__(self, students: list[Student], date: datetime):

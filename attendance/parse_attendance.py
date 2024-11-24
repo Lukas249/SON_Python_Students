@@ -1,7 +1,7 @@
 import datetime
 
-from GitProject.attendance.attendance import Attendance
-from GitProject.students.student import Student
+from attendance.attendance import Attendance
+from students.student import Student
 
 class ParseAttendance:
     @staticmethod

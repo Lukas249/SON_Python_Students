@@ -1,13 +1,13 @@
 import datetime
 
-from GitProject.attendance.attendance import Attendance
-from GitProject.attendance.format_attendance import FormatAttendance
-from GitProject.attendance.parse_attendance import ParseAttendance
-from GitProject.students.format_students import FormatStudents
-from GitProject.students.parse_students import ParseStudents
-from GitProject.file_handler import FileHandler
-from GitProject.students.student import Student
-from GitProject.students.students_manager import StudentsManager
+from attendance.attendance import Attendance
+from attendance.format_attendance import FormatAttendance
+from attendance.parse_attendance import ParseAttendance
+from students.format_students import FormatStudents
+from students.parse_students import ParseStudents
+from file_handler import FileHandler
+from students.student import Student
+from students.students_manager import StudentsManager
 
 # paths
 pathCSV = "lists/student_list.csv"

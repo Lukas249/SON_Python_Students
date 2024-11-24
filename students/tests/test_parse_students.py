@@ -1,4 +1,4 @@
-from GitProject.students.parse_students import ParseStudents
+from students.parse_students import ParseStudents
 
 
 class TestParseStudents:

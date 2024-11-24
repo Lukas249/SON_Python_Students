@@ -1,5 +1,5 @@
-from GitProject.students.student import Student
-from GitProject.students.students_manager import StudentsManager
+from students.student import Student
+from students.students_manager import StudentsManager
 
 class TestStudentsManager:
 

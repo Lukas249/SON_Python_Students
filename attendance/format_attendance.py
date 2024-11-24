@@ -1,5 +1,4 @@
-from GitProject.attendance.attendance import Attendance
-
+from attendance.attendance import Attendance
 
 class FormatAttendance:
     @staticmethod
