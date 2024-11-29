@@ -1,9 +1,20 @@
+from abc import abstractmethod
+
 from students.student import Student
 
 
-class FormatStudents:
+class BaseFormatStudents:
+
     @staticmethod
-    def format_to_txt(students: list[Student]) -> list[str]:
+    @abstractmethod
+    def format(students: list[Student]) -> list[str]:
+        pass
+
+
+class FormatStudentsTXT(BaseFormatStudents):
+
+    @staticmethod
+    def format(students: list[Student]) -> list[str]:
         lines = []
 
         for i in range(len(students)):
@@ -26,8 +37,10 @@ class FormatStudents:
 
         return lines
 
+class FormatStudentsCSV(BaseFormatStudents):
+
     @staticmethod
-    def format_to_csv(students: list[Student]) -> list[str]:
+    def format(students: list[Student]) -> list[str]:
         lines = []
 
         for i in range(len(students)):
