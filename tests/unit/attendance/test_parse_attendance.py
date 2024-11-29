@@ -1,4 +1,5 @@
-from attendance.parse_attendance import ParseAttendance
+from attendance.parse_attendance import ParseAttendanceCSV, ParseAttendanceTXT
+
 
 class TestParseAttendance:
     def test_parse_to_attendance_csv_multiple_students(self):
@@ -25,7 +26,7 @@ class TestParseAttendance:
         want_date = "24.11.2024"
 
         # When
-        got = ParseAttendance.csv(lines)
+        got = ParseAttendanceCSV.parse(lines)
 
         # Then
         assert want_students == [student.dict(["Name", "Surname", "ID"]) for student in got.students]
@@ -48,7 +49,7 @@ class TestParseAttendance:
         want_date = "20.11.2024"
 
         # When
-        got = ParseAttendance.csv(lines)
+        got = ParseAttendanceCSV.parse(lines)
 
         # Then
         assert want_students == [student.dict(["Name", "Surname", "ID"]) for student in got.students]
@@ -68,7 +69,7 @@ class TestParseAttendance:
         want_date = "10.11.2024"
 
         # When
-        got = ParseAttendance.csv(lines)
+        got = ParseAttendanceCSV.parse(lines)
 
         # Then
         assert want_students == [student.dict(["Name", "Surname", "ID"]) for student in got.students]
@@ -100,7 +101,7 @@ class TestParseAttendance:
         want_date = "26.12.2023"
 
         # When
-        got = ParseAttendance.txt(lines)
+        got = ParseAttendanceTXT.parse(lines)
 
         # Then
         assert want_students == [student.dict(["Name", "Surname", "ID"]) for student in got.students]
@@ -125,7 +126,7 @@ class TestParseAttendance:
         want_date = "28.12.2023"
 
         # When
-        got = ParseAttendance.txt(lines)
+        got = ParseAttendanceTXT.parse(lines)
 
         # Then
         assert want_students == [student.dict(["Name", "Surname", "ID"]) for student in got.students]
@@ -145,7 +146,7 @@ class TestParseAttendance:
         want_date = "28.12.2023"
 
         # When
-        got = ParseAttendance.txt(lines)
+        got = ParseAttendanceTXT.parse(lines)
 
         # Then
         assert want_students == [student.dict(["Name", "Surname", "ID"]) for student in got.students]
