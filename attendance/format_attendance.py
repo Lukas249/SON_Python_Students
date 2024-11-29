@@ -1,8 +1,16 @@
+from abc import abstractmethod
+
 from attendance.attendance import Attendance
 
-class FormatAttendance:
+class BaseFormatAttendance:
     @staticmethod
-    def format_to_txt(attendance: Attendance):
+    @abstractmethod
+    def format(attendance: Attendance) -> list[str]:
+        pass
+
+class FormatAttendanceTXT(BaseFormatAttendance):
+    @staticmethod
+    def format(attendance: Attendance) -> list[str]:
         date = attendance.date.strftime("%d.%m.%Y")
 
         if len(attendance.students) == 0:
@@ -37,8 +45,11 @@ class FormatAttendance:
 
         return lines
 
+
+class FormatAttendanceCSV(BaseFormatAttendance):
+
     @staticmethod
-    def format_to_csv(attendance):
+    def format(attendance: Attendance) -> list[str]:
         date = attendance.date.strftime("%d.%m.%Y")
 
         if len(attendance.students) == 0:
