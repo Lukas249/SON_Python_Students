@@ -1,6 +1,7 @@
 from file_handler import BaseFileSaver
 from students.export_students import BaseExportStudents
-from students.format_students import FormatStudentsTXT, FormatStudentsCSV
+from students.format.format_csv_students import FormatStudentsCSV
+from students.format.format_txt_students import FormatStudentsTXT
 from students.student import Student
 from students.students_manager import StudentsManager
 

@@ -1,12 +1,14 @@
 import datetime
 
 from attendance.attendance import Attendance
-from attendance.format_attendance import FormatAttendanceTXT
-from attendance.parse_attendance import ParseAttendanceTXT
+from attendance.format.format_txt_attendance import FormatAttendanceTXT
+from attendance.parse.parse_txt_attendance import ParseAttendanceTXT
 from students.export_students import ExportStudents
-from students.format_students import FormatStudentsTXT, FormatStudentsCSV
-from students.parse_students import ParseStudentsTXT, ParseStudentsCSV
 from file_handler import FileHandler
+from students.format.format_csv_students import FormatStudentsCSV
+from students.format.format_txt_students import FormatStudentsTXT
+from students.parse.parse_csv_students import ParseStudentsCSV
+from students.parse.parse_txt_students import ParseStudentsTXT
 from students.student import Student
 from students.students_manager import StudentsManager
 
@@ -15,7 +17,7 @@ pathCSV = "lists/student_list.csv"
 pathTXT = "lists/student_list.txt"
 
 # import
-# students_list = ParseStudentsCSV.parse(FileHandler.load(pathCSV))
+#students_list = ParseStudentsCSV.parse(FileHandler.load(pathCSV))
 students_list = ParseStudentsTXT.parse(FileHandler.load(pathTXT))
 
 
@@ -27,20 +29,20 @@ for students in lista2:
     print(students.get("Name"), students.get("Surname"), students.get("ID"))
 '''
 
-# # students manager
-# students_txt_exporter = ExportStudents(
-#     file_saver=FileHandler(),
-#     formatter=FormatStudentsTXT(),
-#     export_path=pathTXT
-# )
-#
-# students_csv_exporter = ExportStudents(
-#     file_saver=FileHandler(),
-#     formatter=FormatStudentsCSV(),
-#     export_path=pathCSV
-# )
-#
-# manage_students = StudentsManager(students_list, [students_txt_exporter, students_csv_exporter])
+# students manager
+students_txt_exporter = ExportStudents(
+    file_saver=FileHandler(),
+    formatter=FormatStudentsTXT(),
+    export_path=pathTXT
+)
+
+students_csv_exporter = ExportStudents(
+    file_saver=FileHandler(),
+    formatter=FormatStudentsCSV(),
+    export_path=pathCSV
+)
+
+manage_students = StudentsManager(students_list, [students_txt_exporter, students_csv_exporter])
 
 
 # # add students
@@ -74,7 +76,7 @@ for students in lista2:
 # # format attendance
 # txt_format_attendance = FormatAttendanceTXT.format(attendance)
 #
-# # export attendance
+# export attendance
 # FileHandler.save(attendance_path, txt_format_attendance)
 #
 # # # import and parse attendance

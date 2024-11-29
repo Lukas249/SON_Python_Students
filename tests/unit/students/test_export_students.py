@@ -1,6 +1,7 @@
 from file_handler import BaseFileSaver
-from students.export_students import BaseExportStudents, ExportStudents
-from students.format_students import FormatStudentsTXT
+from students.export_students import ExportStudents
+from students.format.format_txt_students import FormatStudentsTXT
+
 from students.student import Student
 
 class MockFileSaver(BaseFileSaver):
