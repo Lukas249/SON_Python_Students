@@ -1,9 +1,18 @@
+from abc import abstractmethod
+
 from students.student import Student
 
+class BaseParseStudents:
 
-class ParseStudents:
     @staticmethod
-    def csv_to_list(lines: list[str]) -> list[Student]:
+    @abstractmethod
+    def parse(lines: list[str]) -> list[Student]:
+        pass
+
+class ParseStudentsCSV(BaseParseStudents):
+
+    @staticmethod
+    def parse(lines: list[str]) -> list[Student]:
         students = []
 
         for line in lines:
@@ -21,8 +30,9 @@ class ParseStudents:
 
         return students
 
+class ParseStudentsTXT(BaseParseStudents):
     @staticmethod
-    def txt_to_list(lines: list[str]) -> list[Student]:
+    def parse(lines: list[str]) -> list[Student]:
         students = []
 
         for line in lines:
