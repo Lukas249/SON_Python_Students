@@ -1,11 +1,19 @@
 import datetime
+from abc import abstractmethod
 
 from attendance.attendance import Attendance
 from students.student import Student
 
-class ParseAttendance:
+class BaseParseAttendance:
     @staticmethod
-    def txt(lines: list[str]) -> Attendance:
+    @abstractmethod
+    def parse(lines: list[str]) -> Attendance:
+        pass
+
+class ParseAttendanceTXT(BaseParseAttendance):
+
+    @staticmethod
+    def parse(lines: list[str]) -> Attendance:
         students = []
 
         date_list = [int(x) for x in lines[0].split(":")[1].split(".")]
@@ -28,13 +36,12 @@ class ParseAttendance:
 
             students.append(student)
 
-        attendance = Attendance(students, date)
-        attendance.presence = presence
+        return Attendance(students, date, presence)
 
-        return attendance
+class ParseAttendanceCSV(BaseParseAttendance):
 
     @staticmethod
-    def csv(lines: list[str]) -> Attendance:
+    def parse(lines: list[str]) -> Attendance:
         students = []
 
         date_list = [int(x) for x in lines[0].split(":")[1].split(".")]
@@ -57,7 +64,4 @@ class ParseAttendance:
 
             students.append(student)
 
-        attendance = Attendance(students, date)
-        attendance.presence = presence
-
-        return attendance
+        return Attendance(students, date, presence)
