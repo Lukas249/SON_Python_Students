@@ -1,4 +1,4 @@
-from students.parse_students import ParseStudents
+from students.parse_students import ParseStudentsTXT, ParseStudentsCSV
 
 
 class TestParseStudents:
@@ -19,7 +19,7 @@ class TestParseStudents:
         ]
 
         # When
-        got = [student.dict(student_structure) for student in ParseStudents.csv_to_list(file_content)]
+        got = [student.dict(student_structure) for student in ParseStudentsCSV.parse(file_content)]
 
         # Then
         assert want == got
@@ -37,7 +37,7 @@ class TestParseStudents:
         ]
 
         # When
-        got = [student.dict(student_structure) for student in ParseStudents.csv_to_list(file_content)]
+        got = [student.dict(student_structure) for student in ParseStudentsCSV.parse(file_content)]
 
         # Then
         assert want == got
@@ -51,7 +51,7 @@ class TestParseStudents:
         want = []
 
         # When
-        got = [student.dict(student_structure) for student in ParseStudents.csv_to_list(file_content)]
+        got = [student.dict(student_structure) for student in ParseStudentsCSV.parse(file_content)]
 
         # Then
         assert want == got
@@ -73,7 +73,7 @@ class TestParseStudents:
         ]
 
         # When
-        got = [student.dict(student_structure) for student in ParseStudents.txt_to_list(file_content)]
+        got = [student.dict(student_structure) for student in ParseStudentsTXT.parse(file_content)]
 
         # Then
         assert want == got
@@ -91,7 +91,7 @@ class TestParseStudents:
         ]
 
         # When
-        got = [student.dict(student_structure) for student in ParseStudents.txt_to_list(file_content)]
+        got = [student.dict(student_structure) for student in ParseStudentsTXT.parse(file_content)]
 
         # Then
         assert want == got
@@ -105,7 +105,7 @@ class TestParseStudents:
         want = []
 
         # When
-        got = [student.dict(student_structure) for student in ParseStudents.txt_to_list(file_content)]
+        got = [student.dict(student_structure) for student in ParseStudentsTXT.parse(file_content)]
 
         # Then
         assert want == got
