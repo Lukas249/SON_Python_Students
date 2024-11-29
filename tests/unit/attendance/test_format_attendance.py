@@ -1,7 +1,7 @@
 import datetime
 
 from attendance.attendance import Attendance
-from attendance.format_attendance import FormatAttendance
+from attendance.format_attendance import FormatAttendanceCSV, FormatAttendanceTXT
 from students.student import Student
 
 class TestFormatAttendance:
@@ -36,7 +36,7 @@ class TestFormatAttendance:
         ]
 
         # When
-        got = FormatAttendance.format_to_csv(attendance)
+        got = FormatAttendanceCSV.format(attendance)
 
         # Then
         assert want == got
@@ -60,7 +60,7 @@ class TestFormatAttendance:
         ]
 
         # When
-        got = FormatAttendance.format_to_csv(attendance)
+        got = FormatAttendanceCSV.format(attendance)
 
         # Then
         assert want == got
@@ -77,7 +77,7 @@ class TestFormatAttendance:
         ]
 
         # When
-        got = FormatAttendance.format_to_csv(attendance)
+        got = FormatAttendanceCSV.format(attendance)
 
         # Then
         assert want == got
@@ -113,7 +113,7 @@ class TestFormatAttendance:
         ]
 
         # When
-        got = FormatAttendance.format_to_txt(attendance)
+        got = FormatAttendanceTXT.format(attendance)
 
         # Then
         assert want == got
@@ -137,7 +137,7 @@ class TestFormatAttendance:
         ]
 
         # When
-        got = FormatAttendance.format_to_txt(attendance)
+        got = FormatAttendanceTXT.format(attendance)
 
         # Then
         assert want == got
@@ -154,7 +154,7 @@ class TestFormatAttendance:
         ]
 
         # When
-        got = FormatAttendance.format_to_txt(attendance)
+        got = FormatAttendanceTXT.format(attendance)
 
         # Then
         assert want == got
