@@ -3,8 +3,8 @@
 from students.student import Student
 
 class Attendance:
-    def __init__(self, students: list[Student], date: datetime):
-        self.presence = {x.id: False for x in students}
+    def __init__(self, students: list[Student], date: datetime, presence: dict[str, bool] = None):
+        self.presence = {x.id: False for x in students} if presence is None else presence
         self.students = students
         self.date = date
 
