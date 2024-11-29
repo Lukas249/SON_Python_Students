@@ -1,4 +1,4 @@
-from students.format_students import FormatStudents
+from students.format_students import FormatStudentsTXT, FormatStudentsCSV
 from students.student import Student
 
 
@@ -30,7 +30,7 @@ class TestFormatStudents:
         ]
 
         # When
-        got = FormatStudents.format_to_csv(students)
+        got = FormatStudentsCSV.format(students)
 
         # Then
         assert want == got
@@ -50,7 +50,7 @@ class TestFormatStudents:
         ]
 
         # When
-        got = FormatStudents.format_to_csv(students)
+        got = FormatStudentsCSV.format(students)
 
         # Then
         assert want == got
@@ -62,7 +62,7 @@ class TestFormatStudents:
         want = []
 
         # When
-        got = FormatStudents.format_to_csv(students)
+        got = FormatStudentsCSV.format(students)
 
         # Then
         assert want == got
@@ -94,7 +94,7 @@ class TestFormatStudents:
         ]
 
         # When
-        got = FormatStudents.format_to_txt(students)
+        got = FormatStudentsTXT.format(students)
 
         # Then
         assert want == got
@@ -114,7 +114,7 @@ class TestFormatStudents:
         ]
 
         # When
-        got = FormatStudents.format_to_txt(students)
+        got = FormatStudentsTXT.format(students)
 
         # Then
         assert want == got
@@ -126,7 +126,7 @@ class TestFormatStudents:
         want = []
 
         # When
-        got = FormatStudents.format_to_txt(students)
+        got = FormatStudentsTXT.format(students)
 
         # Then
         assert want == got
