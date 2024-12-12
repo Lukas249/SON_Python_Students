@@ -1,7 +1,8 @@
-from SON_Python_Students.students import ExportStudents
+from SON_Python_Students.students.export_students import ExportStudents
+from SON_Python_Students.students.format.format_txt_students import FormatStudentsTXT
 from file_handler import FileHandler
 from SON_Python_Students.students.format.format_csv_students import FormatStudentsCSV
-from SON_Python_Students.students import FormatStudentsTXT
+
 from SON_Python_Students.students.parse.parse_txt_students import ParseStudentsTXT
 from SON_Python_Students.students.students_manager import StudentsManager
 
