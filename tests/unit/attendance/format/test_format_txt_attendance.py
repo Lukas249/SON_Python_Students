@@ -1,8 +1,9 @@
 import datetime
 
-from attendance.attendance import Attendance
-from attendance.format.format_txt_attendance import FormatAttendanceTXT
-from students.student import Student
+
+from SON_Python_Students.attendance.attendance import Attendance
+from SON_Python_Students.attendance.format.format_txt_attendance import FormatAttendanceTXT
+from SON_Python_Students.students.student import Student
 
 class TestFormatAttendanceTXT:
     def test_format_multiple_students(self):

@@ -1,6 +1,6 @@
 from abc import abstractmethod
 
-from students.student import Student
+from SON_Python_Students.students.student import Student
 
 
 class BaseParseStudents:

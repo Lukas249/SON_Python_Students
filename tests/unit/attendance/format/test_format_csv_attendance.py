@@ -1,8 +1,10 @@
 import datetime
 
-from attendance.attendance import Attendance
-from attendance.format.format_csv_attendance import FormatAttendanceCSV
-from students.student import Student
+
+from SON_Python_Students.attendance.attendance import Attendance
+from SON_Python_Students.students.student import Student
+
+from SON_Python_Students.attendance.format.format_csv_attendance import FormatAttendanceCSV
 
 class TestFormatAttendanceCSV:
     def test_format_multiple_students(self):

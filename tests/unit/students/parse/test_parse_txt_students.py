@@ -1,4 +1,4 @@
-from students.parse.parse_txt_students import ParseStudentsTXT
+from SON_Python_Students.students.parse.parse_txt_students import ParseStudentsTXT
 
 
 class TestParseStudentsTXT:

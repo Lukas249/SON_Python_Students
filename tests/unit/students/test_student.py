@@ -1,5 +1,4 @@
-from students.student import Student
-
+from SON_Python_Students.students.student import Student
 
 class TestStudent:
     def test_student(self):

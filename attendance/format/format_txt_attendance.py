@@ -1,6 +1,5 @@
-from attendance.attendance import Attendance
-from attendance.format.base_format_attendance import BaseFormatAttendance
-
+from SON_Python_Students.attendance.attendance import Attendance
+from SON_Python_Students.attendance.format.base_format_attendance import BaseFormatAttendance
 
 class FormatAttendanceTXT(BaseFormatAttendance):
     @staticmethod

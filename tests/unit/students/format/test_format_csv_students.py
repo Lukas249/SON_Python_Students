@@ -1,5 +1,5 @@
-from students.format.format_csv_students import FormatStudentsCSV
-from students.student import Student
+from SON_Python_Students.students.format.format_csv_students import FormatStudentsCSV
+from SON_Python_Students.students.student import Student
 
 
 class TestFormatStudentsCSV:

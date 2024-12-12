@@ -1,16 +1,9 @@
-import datetime
-
-from attendance.attendance import Attendance
-from attendance.format.format_txt_attendance import FormatAttendanceTXT
-from attendance.parse.parse_txt_attendance import ParseAttendanceTXT
-from students.export_students import ExportStudents
+from SON_Python_Students.students import ExportStudents
 from file_handler import FileHandler
-from students.format.format_csv_students import FormatStudentsCSV
-from students.format.format_txt_students import FormatStudentsTXT
-from students.parse.parse_csv_students import ParseStudentsCSV
-from students.parse.parse_txt_students import ParseStudentsTXT
-from students.student import Student
-from students.students_manager import StudentsManager
+from SON_Python_Students.students.format.format_csv_students import FormatStudentsCSV
+from SON_Python_Students.students import FormatStudentsTXT
+from SON_Python_Students.students.parse.parse_txt_students import ParseStudentsTXT
+from SON_Python_Students.students.students_manager import StudentsManager
 
 # paths
 pathCSV = "lists/student_list.csv"

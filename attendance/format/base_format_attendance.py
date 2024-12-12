@@ -1,7 +1,6 @@
 from abc import abstractmethod
 
-from attendance.attendance import Attendance
-
+from SON_Python_Students.attendance.attendance import Attendance
 
 class BaseFormatAttendance:
     @staticmethod

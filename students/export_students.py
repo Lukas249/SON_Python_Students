@@ -1,8 +1,8 @@
-from file_handler import BaseFileSaver
+from SON_Python_Students.file_handler import BaseFileSaver
 from abc import ABC, abstractmethod
 
-from students.format.base_format_students import BaseFormatStudents
-from students.student import Student
+from SON_Python_Students.students.format.base_format_students import BaseFormatStudents
+from SON_Python_Students.students.student import Student
 
 class BaseExportStudents(ABC):
 

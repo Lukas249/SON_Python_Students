@@ -1,9 +1,8 @@
 import datetime
 
-from attendance.attendance import Attendance
-from attendance.parse.base_parse_attendance import BaseParseAttendance
-from students.student import Student
-
+from SON_Python_Students.attendance.attendance import Attendance
+from SON_Python_Students.attendance.parse.base_parse_attendance import BaseParseAttendance
+from SON_Python_Students.students.student import Student
 
 class ParseAttendanceTXT(BaseParseAttendance):
 

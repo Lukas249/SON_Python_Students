@@ -1,5 +1,5 @@
-from students.parse.base_parse_students import BaseParseStudents
-from students.student import Student
+from SON_Python_Students.students.parse.base_parse_students import BaseParseStudents
+from SON_Python_Students.students.student import Student
 
 
 class ParseStudentsCSV(BaseParseStudents):

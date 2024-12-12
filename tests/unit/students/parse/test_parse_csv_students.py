@@ -1,4 +1,4 @@
-from students.parse.parse_csv_students import ParseStudentsCSV
+from SON_Python_Students.students.parse.parse_csv_students import ParseStudentsCSV
 
 
 class TestParseStudentsCSV:

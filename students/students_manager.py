@@ -1,5 +1,5 @@
-from students.export_students import BaseExportStudents
-from students.student import Student
+from SON_Python_Students.students.export_students import BaseExportStudents
+from SON_Python_Students.students.student import Student
 
 class StudentsManager:
 

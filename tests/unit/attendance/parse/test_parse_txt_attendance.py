@@ -1,4 +1,4 @@
-from attendance.parse.parse_txt_attendance import ParseAttendanceTXT
+from SON_Python_Students.attendance.parse.parse_txt_attendance import ParseAttendanceTXT
 
 
 class TestParseAttendanceTXT:

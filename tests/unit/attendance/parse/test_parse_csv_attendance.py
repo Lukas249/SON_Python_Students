@@ -1,4 +1,4 @@
-from attendance.parse.parse_csv_attendance import ParseAttendanceCSV
+from SON_Python_Students.attendance.parse.parse_csv_attendance import ParseAttendanceCSV
 
 
 class TestParseAttendanceCSV:

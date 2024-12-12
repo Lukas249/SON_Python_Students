@@ -1,7 +1,7 @@
 import datetime
 
-from attendance.attendance import Attendance
-from students.student import Student
+from SON_Python_Students.attendance.attendance import Attendance
+from SON_Python_Students.students.student import Student
 
 
 class TestAttendance:

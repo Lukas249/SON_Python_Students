@@ -1,6 +1,5 @@
-from students.format.format_txt_students import FormatStudentsTXT
-from students.student import Student
-
+from SON_Python_Students.students.format.format_txt_students import FormatStudentsTXT
+from SON_Python_Students.students.student import Student
 
 class TestFormatStudentsTXT:
 

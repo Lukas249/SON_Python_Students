@@ -1,6 +1,6 @@
 ﻿from datetime import datetime
 
-from students.student import Student
+from SON_Python_Students.students.student import Student
 
 class Attendance:
     def __init__(self, students: list[Student], date: datetime, presence: dict[str, bool] = None):
