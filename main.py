@@ -6,7 +6,7 @@ from SON_Python_Students.students.format.format_csv_students import FormatStuden
 from SON_Python_Students.students.parse.parse_txt_students import ParseStudentsTXT
 from SON_Python_Students.students.students_manager import StudentsManager
 
-# TODO: add more examples.
+# TODO: add examples
 
 # paths
 pathCSV = "lists/student_list.csv"
