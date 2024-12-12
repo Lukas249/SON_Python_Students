@@ -7,6 +7,7 @@ from SON_Python_Students.students.parse.parse_txt_students import ParseStudentsT
 from SON_Python_Students.students.students_manager import StudentsManager
 
 # TODO: add examples.
+# Issue URL: https://github.com/Lukas249/SON_Python_Students/issues/2
 
 # paths
 pathCSV = "lists/student_list.csv"
