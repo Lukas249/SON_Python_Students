@@ -10,7 +10,7 @@ version = os.getenv(
 )  # Fallback to '0.0.0'version = os.getenv('PACKAGE_VERSION', '0.0.0')  # Fallback to '0.0.0'
 
 setup(
-    name="ams",
+    name="easy-ams",
     version=version,
     author="Łukasz Radecki",
     author_email="lukasz.radecki@edu.uekat.pl",
